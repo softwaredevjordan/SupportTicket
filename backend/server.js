@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   app.get("/", (req, res) => {
-    res.status(200).json("Welcome ");
+    res.status(200).json("Not deployed correctly");
   });
 }
 
