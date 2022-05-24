@@ -7,7 +7,8 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIGPRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "softwaredevjordan",
   "license": "ISC",
@@ -19,7 +20,8 @@
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.3.2"
+    "mongoose": "^6.3.2",
+    "webpack-dev-middleware": "^5.3.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
